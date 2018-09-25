@@ -1,0 +1,24 @@
+.wrapper {
+    background-color: bisque;
+}
+
+.container {
+    background-image: url("../img/stolen-butcherblock-pattern.jpg");
+    background-color: bisque
+}
+
+
+.jumbotron {
+    text-align: center;
+    color: ghostwhite;
+    background-color:#121233;
+
+}
+
+.container-fluid {
+    color: ghostwhite;
+}
+
+h1 {
+
+}

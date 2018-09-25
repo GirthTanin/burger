@@ -1,11 +1,11 @@
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Gooey Lewis", true);
+VALUES ("Gooey Lewis", false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Childhood Summer", true);
+VALUES ("Childhood Summer", false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Gooey Lewis and the News", true);
+VALUES ("Gooey Lewis and the News", false);
 
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Yellow Submarine", false);
