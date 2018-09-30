@@ -1,13 +1,14 @@
-const express = require("express");
-const app = express();
+var express = require("express");
+var app = express();
+var router = express.Router();
 
 var burger = require("../models/burgers.js");
 
 // Create the GET route
 router.get("/", function(request, response) {
-    burger.all(function(data) {
+    burger.selectAll(function(data) {
         var hbsObject = {
-            burger: data
+            burgers: data
         };
         console.log("hbsObject line 12: " + hbsObject);
         res.render("index", hbsObject);
@@ -33,3 +34,6 @@ router.put("/api/burgers/:id", function(request, response) {
         res.status(200).end();
     });
 });
+
+
+module.exports = router;

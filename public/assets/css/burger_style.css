@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: bisque;
+    background-color: #e89738;
 }
 
 .container {
@@ -12,13 +12,19 @@
     text-align: center;
     color: ghostwhite;
     background-color:#121233;
-
 }
 
 .container-fluid {
     color: ghostwhite;
+    font-family: 'Poppins' , helvetica;
+}
+
+#footer {
+
+    color: ghostwhite;
+    background-color: #121233;
 }
 
 h1 {
-
+    font-family: "Playfair Display", sans-serif;
 }

@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8000;
 var app = express();
 
 app.use(express.static("public"));
@@ -16,7 +16,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgers_controller.js");
 
-app.use(routes);
+ app.use(routes);
 
 // This will start my server.
 app.listen(PORT, function() {

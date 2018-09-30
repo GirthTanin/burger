@@ -1,7 +1,47 @@
-<div id="burger-creation">
-    <h1> Stolen Burgers are sweetest,</h1>
-    <h1> and Fries eaten when alone are pleasant! </h1>
-    <img id="burger-first" src="../public/assets/img/stolen-burger.jpg" alt="Mushroom Burger" width="150px" height="150px">
+
+
+{{!-- This will be column a --}}
+<div class="col-sm-3" >
+    <h3>BURGERS TO DELIGHT IN!</h3>
+        <br><br>
+        <ul>
+        {{#each burgers}}
+            {{#unless devoured}}
+                <li>{{this.burger_name}}</li>
+        
+                <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-blt.jpg" alt="Sliced Burger" width="200px" height="200px">
+                <button class="btn" class="devourBurger" data-id={{this.id}}>Enjoy it!</button>
+            {{/unless}}
+        {{/each}}
+        </ul>
 </div>
 
-<form class = """
+{{!-- This will be column b --}}
+<div id="burger-creation">
+    <form class="text-center">
+        <h1> Stolen Burgers are sweetest,</h1>
+        <h1> and Fries eaten when alone are pleasant! </h1>
+        <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-burger.jpg" alt="Mushroom Burger" width="150px" height="150px">
+        <input type="text" class="form-control text-center" id="burgerName" name="burger_name">
+        <button class="btn btn-succes" id="createBurger">CREATE!</button>
+
+    </form>
+</div>
+
+{{!-- This will be column c --}}
+<div class="col-sm-3" >
+    <h3>BURGERS RESIDING IN THE PIT</h3>
+        <br><br>
+        {{#each burgers}}
+            {{#if devoured}}
+                <li>{{this.burger_name}}</li>
+
+       
+       
+                <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-crab.jpg" alt="Eaten Burger" width="200px" height="200px">
+                <button class="btn" class="againBurger" data-id={{this.id}}>Recreate it!</button>
+            {{/if}}
+        {{/each}}
+    </div>
+
+
