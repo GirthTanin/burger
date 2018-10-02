@@ -1,15 +1,16 @@
 
-
+ 
 {{!-- This will be column a --}}
 <div class="col-sm-3" >
     <h3>BURGERS TO DELIGHT IN!</h3>
-        <br><br>
         <ul>
         {{#each burgers}}
-            {{#unless devoured}}
+        <br>
+            {{#unless this.devoured}}
+            <br>
                 <li>{{this.burger_name}}</li>
-        
-                <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-blt.jpg" alt="Sliced Burger" width="200px" height="200px">
+                <br>
+                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-blt.jpg" alt="Sliced Burger" width="150px" height="150px"><br><br>
                 <button class="btn" class="devourBurger" data-id={{this.id}}>Enjoy it!</button>
             {{/unless}}
         {{/each}}
@@ -17,15 +18,18 @@
 </div>
 
 {{!-- This will be column b --}}
+<div class="col-sm-6" ><h3>What is your hearts desire?</h3>
+{{!-- <br> --}}
 <div id="burger-creation">
     <form class="text-center">
         <h1> Stolen Burgers are sweetest,</h1>
-        <h1> and Fries eaten when alone are pleasant! </h1>
-        <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-burger.jpg" alt="Mushroom Burger" width="150px" height="150px">
-        <input type="text" class="form-control text-center" id="burgerName" name="burger_name">
+        <h1> & Fries eaten when alone are pleasant! </h1><br>
+        <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-burger.jpg" alt="Mushroom Burger" width="300px" height="300px"><br><br>
+        <input type="text" class="form-control text-center" id="burgerName" name="burger_name"><br>
         <button class="btn btn-succes" id="createBurger">CREATE!</button>
 
     </form>
+    </div>
 </div>
 
 {{!-- This will be column c --}}
@@ -33,12 +37,12 @@
     <h3>BURGERS RESIDING IN THE PIT</h3>
         <br><br>
         {{#each burgers}}
-            {{#if devoured}}
+            {{#if this.devoured}}
                 <li>{{this.burger_name}}</li>
 
        
        
-                <img id="burger-first" class = "img-rounded" src="../public/assets/img/stolen-crab.jpg" alt="Eaten Burger" width="200px" height="200px">
+                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-crab.jpg" alt="Eaten Burger" width="200px" height="200px">
                 <button class="btn" class="againBurger" data-id={{this.id}}>Recreate it!</button>
             {{/if}}
         {{/each}}

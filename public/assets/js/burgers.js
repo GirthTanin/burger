@@ -1,24 +1,26 @@
-$(function () {
-    $(".devourBurger").on("click", function(event) {
-        let id = $(this).data("id");
+$(document).on("click", "#devourBurger", function(event) {
+        event.preventDefault();
+        let id = $(this).attr("data-id");
 
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: id
+        $.ajax({
+            url: "/api/burgers/" + id,
+            method: "PUT",
         }).then(
-            function() {
+            function(results) {
                 location.reload();
             });
         });
 
-    $("#createBurger").on("click", function(event) {
+$(document).on("click", "#createBurger", function(event) {
         event.preventDefault();
-            let newBurger = {
-                burger_name: $("newBurger").val().trim()
+            var newBurger = {
+                burger_name: $("#createBurger").val().trim(),
+                devoured: 0
             };
 
-            $.ajax("/api/burgers/", {
-                type: "POST",
+            $.ajax({
+                url: "/api/burgers/",
+                method: "POST",
                 data: newBurger
             }).then (
                 function() {
@@ -27,18 +29,19 @@ $(function () {
             );
         });
 
-    $(".againBurger").on("click", function(evet) {
+$(document).on("click", ".againBurger", function(event) {
         event.preventDefault();
             let sameBurger = $(this).data("id");
-            $.ajax("/api/burgers/" + sameBurger, {
-                type: "PUT",
+            $.ajax({
+                url: "/api/burgers/" + sameBurger, 
+                method: "PUT",
                 data: sameBurger
             }).then(
                 function() {
                     location.reload();
                 });
-        });
 });
+
 
 
 

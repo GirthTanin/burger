@@ -9,3 +9,9 @@ VALUES ("Gooey Lewis and the News", false);
 
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Yellow Submarine", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Yellow", true);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("My Sanity", true);
