@@ -9,7 +9,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+var handlebars = require("handlebars");
 var exphbs = require("express-handlebars");
+// var template = Handlebars.compile(source);
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");

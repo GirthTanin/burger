@@ -9,4 +9,4 @@ CREATE TABLE burgers(
 );
 
 SELECT * FROM burgers;
-SELECT * FROM burgers_db.burgers;
+#SELECT * FROM burgers_db.burgers;

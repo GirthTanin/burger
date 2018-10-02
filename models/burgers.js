@@ -3,20 +3,20 @@ const orm = require("../config/orm.js");
 
 // using a constant here should work as the object can mutate
 const burger = {
-    selectAll: function(cb) {
-        orm.selectAll("burgers", function(response) {
-            cb(response);
+    selectAll: function(callback) {
+        orm.selectAll(function (response) {
+            callback(response);
         });
     },
-    // the variables cols and vals are arrays...
-    insertOne: function(cols, vals, cb) {
-        orm.insertOne("burgers", cols, vals, function(response) {
-            cb(response);
+    
+    insertOne: function(burger_name, callback) {
+        orm.insertOne(burger_name, function(response) {
+            callback(response);
         });
     },
-    updateOne: function(objColVals, condition, cb) {
-        orm.update("burgers", objColVals, condition, function(response) {
-            cb(response);
+    updateOne: function(burgerId, callback) {
+        orm.update(burgerId, function(response) {
+            callback(response);
         });
     }
 };
