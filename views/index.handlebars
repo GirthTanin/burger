@@ -10,7 +10,7 @@
             <br>
                 <li>{{this.burger_name}}</li>
                 <br>
-                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-blt.jpg" alt="Sliced Burger" width="150px" height="150px"><br><br>
+                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-blt.jpg" alt="Sliced Burger" width="175px" height="175px"><br><br>
                 <button class="btn" class="devourBurger" data-id={{this.id}}>Enjoy it!</button>
             {{/unless}}
         {{/each}}
@@ -27,7 +27,7 @@
         <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-burger.jpg" alt="Mushroom Burger" width="300px" height="300px"><br><br>
         <input type="text" class="form-control text-center" id="burgerName" name="burger_name"><br>
         <button class="btn btn-succes" id="createBurger">CREATE!</button>
-
+            
     </form>
     </div>
 </div>
@@ -35,17 +35,21 @@
 {{!-- This will be column c --}}
 <div class="col-sm-3" >
     <h3>BURGERS RESIDING IN THE PIT</h3>
-        <br><br>
+        <ul>
         {{#each burgers}}
-            {{#if this.devoured}}
+            {{#if this.devoured}}<br><br>
                 <li>{{this.burger_name}}</li>
+                    <br>
 
        
        
-                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-crab.jpg" alt="Eaten Burger" width="200px" height="200px">
+                <img id="burger-first" class = "img-rounded" src="/assets/img/stolen-crab.jpg" alt="Eaten Burger" width="175px" height="175px">
+                <br><br>
                 <button class="btn" class="againBurger" data-id={{this.id}}>Recreate it!</button>
+                <br>
             {{/if}}
         {{/each}}
+        </ul>
     </div>
 
 

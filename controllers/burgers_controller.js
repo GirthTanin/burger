@@ -13,8 +13,8 @@ router.get("/", function(req, res) {
 // the POST route
 router.post("/api/burgers", function(request, response) { 
     console.log("burgers_controller.js line 16 " + request.body);
-    burger.insertOne([ "burger_name", "devoured"], [request.body.burger_name, request.body.devoured], function (data) {
-    response.json({ id: data.insertId });
+    burger.insertOne(request.body.burger_name, function (data) {
+    response.redirect("/");
     });
 });
     

@@ -28,10 +28,10 @@ $(document).on("click", "#createBurger", function(event) {
                 }
             );
         });
-
+ 
 $(document).on("click", ".againBurger", function(event) {
         event.preventDefault();
-            let sameBurger = $(this).data("id");
+            var sameBurger = $(this).data("id");
             $.ajax({
                 url: "/api/burgers/" + sameBurger, 
                 method: "PUT",
