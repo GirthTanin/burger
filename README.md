@@ -8,7 +8,7 @@ Meeting standardized file and folder structure was also required.
 ##To Fork and Play with this yourself
 You will need to run *npm install* in the command line to have the node packages that will allow this to run for you.  After you have all the files, at the server.js level use `npm start` or `node server.js` to begin the fun.  Once it is running, from your browser you can interact with it at `localhost:8080/`.
 
-<img src="./app/public/images/Biblical-Burgers.png" style="width: 600px;">
+<img src="./public/images/Biblical-Burgers.png" style="width: 600px;">
 
 <br><br>
 
