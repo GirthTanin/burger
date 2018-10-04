@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
 
 // the POST route
 router.post("/api/burgers", function(request, response) { 
-    console.log("burgers_controller.js line 16 " + request.body);
+    console.log("burgers_controller.js line 15 " + JSON.stringify(request.body));
     burger.insertOne(request.body.burger_name, function (data) {
     response.redirect("/");
     });
@@ -31,18 +31,11 @@ router.put("/api/burgers/:id", function(request, response) {
 //to recreate the burger (devoured: false)...
 router.put("/api/burgers/:id", function(request, response) {
     var burgerId = request.params.id;
-    burger.updateOne({
-        devoured: 0
-    }, burgerId, function(result) {
-        console.log(result);
+    burger.recreateOne(burgerId, function(result) {
+        // console.log(result);
         response.send(result);
         response.status(200).end();
     });
 });
-
-router.get("*", function (req, res) {
-    res.redirect("/");
-});
-
 
 module.exports = router;

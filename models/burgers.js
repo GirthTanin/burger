@@ -1,3 +1,4 @@
+console.log("burgers.js loaded");
 // pulling in the ORM to work with the data base using functions.
 const orm = require("../config/orm.js");
 
@@ -8,17 +9,22 @@ const burger = {
             callback(response);
         });
     },
-    
+     
     insertOne: function(burger_name, callback) {
         orm.insertOne(burger_name, function(response) {
             callback(response);
         });
     },
     updateOne: function(burgerId, callback) {
-        orm.update(burgerId, function(response) {
+        orm.updateOne(burgerId, function(response) {
+            callback(response);
+        });
+    },
+    recreateOne: function(burgerId, callback) {
+        orm.recreateOne(burgerId, function(response) {
             callback(response);
         });
     }
 };
 
-module.exports = burger;
+module.exports = burger;  
