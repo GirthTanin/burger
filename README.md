@@ -1,16 +1,13 @@
-# burger
+# Biblical Burgers
+<img src="./public/assets/img/Biblical-Burgers.png" style="width: 600px;">
 This is my homework for week 14 of my Trilogy Boot Camp at the University of Pennsylvania
 
 ## Skill Sets Demonstrated
-In this challenge I created application using Node, Express, MySQL, my first ORM and used Handlebars to create a page of reusable elements. Being much more interesting to use rather than recreate oneself, it is deployed also to Heroku.
-https://warm-savannah-56084.herokuapp.com/
-Meeting standardized file and folder structure was also required.
+In this challenge I created application using Node, Express, MySQL, my first homemade ORM and used Handlebars to create a page of reusable elements. <br> Being much more interesting to use rather than recreate oneself, it is deployed also to Heroku.<br>
+https://warm-savannah-56084.herokuapp.com/<br>
+Meeting standardized file and folder structure was also required.<br>
 ##To Fork and Play with this yourself
-You will need to run *npm install* in the command line to have the node packages that will allow this to run for you.  After you have all the files, at the server.js level use `npm start` or `node server.js` to begin the fun.  Once it is running, from your browser you can interact with it at `localhost:8080/`.
-
-<img src="./public/images/Biblical-Burgers.png" style="width: 600px;">
-
-<br><br>
+You will need to run *npm install* in the command line to have the node packages that will allow this to run for you.  After you have all the files, at the server.js level use `npm start` or `node server.js` to begin the fun.  Once it is running, from your browser you can interact with it at `localhost:8000/`.
 
 ### The asked for file structure:
 
