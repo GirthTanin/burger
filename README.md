@@ -67,5 +67,5 @@ You will need to run *npm install* in the command line to have the node packages
 *stackoverflow
 *Erik & Dan & Ed
 
-##Authors
+## Authors
 **Jonathan F McCarthy** - *Author*
